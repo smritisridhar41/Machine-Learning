@@ -111,6 +111,6 @@ def main():
         W1 += learning_rate * derivative_w1(output, T, W2, hidden, X)
         b1 += learning_rate * derivative_b1(output, T, W2, hidden)
 
-if __name__ == '__main__':
+if __name__ == '__main__'
     main()
 

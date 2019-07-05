@@ -36,7 +36,7 @@ class KMeans():
         # - Update means and membership until convergence or until you have made self.max_iter updates.
         # - return (means, membership, number_of_updates)
 
-        # DONOT CHANGE CODE ABOVE THIS LINE
+        
         # raise Exception(
         #     'Implement fit function in KMeans class (filename: kmeans.py)')
 
@@ -65,7 +65,7 @@ class KMeans():
                 cluster_mean = np.dot(membership_binary.T, x) / count.reshape((count.shape[0], 1))
                 J = J_new
 
-        # DONOT CHANGE CODE BELOW THIS LINE
+        
         return (cluster_mean, cluster_membership_index, update_counter)
 
 class KMeansClassifier():
@@ -109,7 +109,7 @@ class KMeansClassifier():
         # - assign means to centroids
         # - assign labels to centroid_labels
 
-        # DONOT CHANGE CODE ABOVE THIS LINE
+       
         # raise Exception(
         #     'Implement fit function in KMeansClassifier class (filename: kmeans.py)')
         kmeans = KMeans(self.n_cluster, self.max_iter, self.e)
@@ -124,7 +124,7 @@ class KMeansClassifier():
         self.centroid_labels = centroid_labels
         self.centroids = centroids
 
-        # DONOT CHANGE CODE BELOW THIS LINE
+        
         assert self.centroid_labels.shape == (self.n_cluster,), 'centroid_labels should be a numpy array of shape ({},)'.format(self.n_cluster)
 
         assert self.centroids.shape == (self.n_cluster, D), 'centroid should be a numpy array of shape {} X {}'.format(self.n_cluster, D)
@@ -147,7 +147,7 @@ class KMeansClassifier():
         # - Implement the prediction algorithm
         # - return labels
 
-        # DONOT CHANGE CODE ABOVE THIS LINE
+        
         # raise Exception(
         #     'Implement predict function in KMeansClassifier class (filename: kmeans.py)')
 
@@ -163,5 +163,5 @@ class KMeansClassifier():
         cluster_membership_index = np.array(np.argmin(Matrix, axis=1))
         labels = self.centroid_labels[cluster_membership_index]
 
-        # DONOT CHANGE CODE BELOW THIS LINE
+
         return labels
